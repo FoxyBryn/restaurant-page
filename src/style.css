@@ -4,6 +4,8 @@
     --font-colour: #ffffff;
     --font-colour-hover: #ffffff3a;
     --background-colour: #0000009d;
+    --background-colour-darker: #000000cc;
+    --outline-colour: #000000;
 }
 
 * {
@@ -13,8 +15,8 @@
 }
 
 body {
-    /* font-family: ;
-    font-size: ; */
+    /* font-family: ; */
+    font-size: 1.2rem;
     color: var(--font-colour);
     background-image: url(./images/forest-one.jpg);
     background-attachment: fixed;
@@ -37,6 +39,7 @@ header {
     width: 100%;
     padding: 2rem;
     background-color: var(--background-colour);
+    border-bottom: 1px solid var(--outline-colour);
 
     & h1 {
         font-family: 'Fleur De Leah', serif;
@@ -53,7 +56,6 @@ header {
         border: none;
         outline: none;
         cursor: pointer;
-
     }
 }
 
@@ -64,7 +66,28 @@ main {
     justify-content: center;
     width: 50%;
     height: 50%;
-    background-color: var(--background-colour);
+    background-color: var(--background-colour-darker);
+    border: 1px solid var(--outline-colour);
+    margin: 2rem 0 2rem 0;
+
+    > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    & p {
+        padding: 1rem;
+    }
+
+    & .fox-image {
+        width: 50vw;
+        height: 50vh;
+        border-radius: 50%;
+        background-image: url(./images/fox.jpg);
+        background-size: cover;
+    }
 }
 
 footer {
@@ -75,6 +98,7 @@ footer {
     gap: 1rem;
     height: 5rem;
     width: 100%;
+    border-top: 1px solid var(--outline-colour);
 
     & svg {
         fill: var(--font-colour);
